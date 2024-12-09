@@ -67,5 +67,6 @@ checksum = sum . map (uncurry (*)) . zip [0..]
 main :: IO ()
 main = do
   disk <- readDisk . map digitToInt . init <$> readFile "input.txt"
-  print $ checksum $ decode $ compact disk)
-  print $ checksum $ decode $ compact' disk)
+  print $ checksum $ decode $ compact disk
+  print $ checksum $ decode $ compact' disk
+
